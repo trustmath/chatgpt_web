@@ -9,7 +9,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # 获取回答
 def get_answer(prompt):
     response = openai.Completion.create(
-        engine="davinci",
+        engine="text-davinci-003",
         prompt=prompt,
         temperature=0.5,
         max_tokens=1024,
@@ -36,12 +36,13 @@ def main():
         st.write("回答：")
         st.write(answer)
 
+'''
         # 保存回答到本地文件
         save_answer = st.button("保存回答")
         if save_answer:
             with open("answer.txt", "w") as file:
                 file.write(answer)
             st.write("回答已保存。")
-
+'''
 if __name__ == "__main__":
     main()
