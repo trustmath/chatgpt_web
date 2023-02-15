@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 
 # 设置OpenAI API key
-openai.api_key = "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"
+openai.api_key = "YOUR_API_KEY"
 
 # 获取回答
 def get_answer(prompt):
