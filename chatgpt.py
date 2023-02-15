@@ -1,8 +1,10 @@
 import openai
 import streamlit as st
+import os
 
 # 设置OpenAI API key
-openai.api_key = "YOUR_API_KEY"
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 # 获取回答
 def get_answer(prompt):
