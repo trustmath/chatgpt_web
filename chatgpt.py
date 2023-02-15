@@ -36,13 +36,6 @@ def main():
         st.write("回答：")
         st.write(answer)
 
-'''
-        # 保存回答到本地文件
-        save_answer = st.button("保存回答")
-        if save_answer:
-            with open("answer.txt", "w") as file:
-                file.write(answer)
-            st.write("回答已保存。")
-'''
+
 if __name__ == "__main__":
     main()
