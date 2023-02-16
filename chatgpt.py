@@ -37,8 +37,7 @@ def main():
         answer = get_answer(user_input)
 
         # 显示问题和回答
-        st.write("问题：")
-        st.write(user_input)
+        st.write("问题：",user_input)
         st.write("回答：")
         st.write(answer)
 
