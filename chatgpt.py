@@ -38,8 +38,8 @@ def main():
 
         # 显示问题和回答
         st.write("问题：",user_input)
-        st.write("回答：")
-        st.write(answer)
+        st.write("回答：",answer)
+
 
 
     
