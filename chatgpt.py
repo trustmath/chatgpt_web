@@ -37,9 +37,9 @@ def main():
         st.write("回答：")
         st.write(answer)
 
-        #显示微信赞赏码
-        image = Image.open("wechat-reward-code.jpg")
-        st.image(image, caption="微信赞赏码", use_column_width=True)
+    #显示微信赞赏码
+    image = Image.open("wechat-reward-code.jpg")
+    st.image(image, caption="微信赞赏码", use_column_width=True)
 
 
 if __name__ == "__main__":
