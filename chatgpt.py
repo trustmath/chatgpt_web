@@ -32,9 +32,7 @@ def main():
 
     if submit_button:
         # 在这里禁用提交按钮，以避免重复提交
-        submit_button = submit_button
-        #submit_button.empty()
-        submit_button = submit_button("提交中...", key="submit_button", disabled=True)
+        submit_button = st.button("提交中...", key="submit_button", disabled=True)
 
 
         # 获取回答
@@ -46,7 +44,7 @@ def main():
 
         # 在这里启用提交按钮，以允许下一次提交
         #submit_button.empty()
-        submit_button = submit_button("提交", key="submit_button")
+        submit_button = st.button("提交", key="submit_button")
 
     #网站介绍
     #st.write("非常感谢您访问我们的网站！我们很高兴地告诉您，我们已经为您实现了在国内直接访问 ChatGPT 的功能，让您可以在本地便捷地进行提问和回答。我们希望您可以在这里得到您所需要的帮助和信息。")
