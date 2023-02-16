@@ -1,5 +1,6 @@
 import openai
 import streamlit as st
+from PIL import Image
 import os
 
 # 设置OpenAI API key
@@ -22,7 +23,7 @@ def get_answer(prompt):
 
 # 创建Streamlit App
 def main():
-    st.title("ChatGPT")
+    st.title("ChatGPT，用人工智能点亮你的灵感火花，创造无限可能！")
     st.write("请提问:")
 
     # 获取用户输入
@@ -35,6 +36,10 @@ def main():
         # 显示回答
         st.write("回答：")
         st.write(answer)
+
+        #显示微信赞赏码
+        image = Image.open("wechat-reward-code.jpg")
+        st.image(image, caption="微信赞赏码", use_column_width=True)
 
 
 if __name__ == "__main__":
