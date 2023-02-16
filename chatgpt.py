@@ -28,14 +28,14 @@ def main():
 
     # 创建输入框和提交按钮
     user_input = st.text_input("", "")
-    submit_button = st.button("提交",key="submit_button")
+    submit_button = st.button("提交")
 
     # 判断用户是否点击了提交按钮
     if submit_button and user_input:
         # 禁用提交按钮，以避免重复提交
         #submit_button = submit_button
         #submit_button.empty()
-        submit_button = st.button("提交中...", key="submit_button", disabled=True)
+        #submit_button = st.button("提交中...", key="submit_button", disabled=True)
 
         # 获取回答
         answer = get_answer(user_input)
@@ -48,7 +48,7 @@ def main():
 
         # 启用提交按钮，以允许下一次提交
         #submit_button= submit_button
-        submit_button = st.button("提交", key="submit_button")
+        #submit_button = st.button("提交", key="submit_button")
 
         # 创建保存回答按钮
         save_answer = st.button("保存回答")
