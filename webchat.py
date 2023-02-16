@@ -1,16 +1,13 @@
 import openai
 import streamlit as st
-from PIL import Image
-import os
 
 # 设置OpenAI API key
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
+openai.api_key = "YOUR_API_KEY"
 
 # 获取回答
 def get_answer(prompt):
     response = openai.Completion.create(
-        engine="text-davinci-003",
+        engine="davinci",
         prompt=prompt,
         temperature=0.5,
         max_tokens=1024,
@@ -23,7 +20,7 @@ def get_answer(prompt):
 
 # 创建Streamlit App
 def main():
-    st.title("ChatGPT，用人工智能点亮你的灵感火花，创造无限可能！")
+    st.title("ChatGPT")
     st.write("请提问:")
 
     # 创建输入框和提交按钮
@@ -44,10 +41,6 @@ def main():
         st.write("回答：")
         st.write(answer)
 
-        # 启用提交按钮，以允许下一次提交
-        submit_button.empty()
-        submit_button = submit_button.button("提交", key="submit_button")
-
         # 创建保存回答按钮
         save_answer = st.button("保存回答")
 
@@ -61,14 +54,9 @@ def main():
                 file.write(answer)
             st.write("回答已保存。")
 
-    
-    #网站介绍
-    #st.write("非常感谢您访问我们的网站！我们很高兴地告诉您，我们已经为您实现了在国内直接访问 ChatGPT 的功能，让您可以在本地便捷地进行提问和回答。我们希望您可以在这里得到您所需要的帮助和信息。")
-    #st.write("我们为了提供更好的服务和更稳定的用户体验，需要您的支持和帮助。如果您认为我们的网站帮助了您，我们希望您可以考虑付费支持我们，这将有助于我们更好地维护和改进我们的服务。感谢您对我们的支持！")
-    #显示微信赞赏码
-    image = Image.open("wechat-reward-code.jpg")
-    st.image(image, caption="微信赞赏码", use_column_width=True)
-
+        # 启用提交按钮，以允许下一次提交
+        submit_button.empty()
+        submit_button = submit_button.button("提交", key="submit_button")
 
 if __name__ == "__main__":
     main()
