@@ -52,6 +52,7 @@ def main():
 
         # 创建保存回答按钮
         save_answer = st.button("保存回答")
+
         # 判断用户是否点击了保存回答按钮
         if save_answer:
             # 弹出对话框，让用户选择保存路径
@@ -59,9 +60,8 @@ def main():
 
             # 保存回答到本地文件
             with open(save_path, "w") as file:
-                file.write(f"问题：{user_input}\n")
-                file.write(f"回答：{answer}\n\n")
-            st.success("问题和回答已保存。")
+                file.write(answer)
+            st.write("回答已保存。")
 
     
     #网站介绍
