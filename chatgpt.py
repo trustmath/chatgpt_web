@@ -33,7 +33,7 @@ def main():
     if submit_button:
         # 在这里禁用提交按钮，以避免重复提交
         submit_button = submit_button
-        submit_button.empty()
+        #submit_button.empty()
         submit_button = submit_button.button("提交中...", key="submit_button", disabled=True)
 
 
@@ -45,7 +45,7 @@ def main():
         st.write(answer)
 
         # 在这里启用提交按钮，以允许下一次提交
-        submit_button.empty()
+        #submit_button.empty()
         submit_button = submit_button.button("提交", key="submit_button")
 
     #网站介绍
