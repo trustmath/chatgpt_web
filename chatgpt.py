@@ -24,12 +24,13 @@ def get_answer(prompt):
 # 创建Streamlit App
 def main():
     st.title("ChatGPT，用人工智能点亮你的灵感火花，创造无限可能！")
-    st.write("请提问:")
+    #st.write("请提问:")
 
     # 获取用户输入
-    prompt = st.text_input("", "")
+    prompt = st.text_input("请输入问题")
+    submit_button = st.button("提交")
 
-    if prompt:
+    if submit_button:
         # 获取回答
         answer = get_answer(prompt)
 
