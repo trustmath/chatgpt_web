@@ -28,15 +28,21 @@ def main():
 
     # 获取用户输入
     prompt = st.text_input("请输入问题：")
-    submit_button = st.button("提交")
+    submit_button = st.button("提交", key="submit_button")
 
     if submit_button:
+        # 在这里禁用提交按钮，以避免重复提交
+        submit_button.enabled = False
+
         # 获取回答
         answer = get_answer(prompt)
 
         # 显示回答
         st.write("回答：")
         st.write(answer)
+
+        # 在这里启用提交按钮，以允许下一次提交
+        submit_button.enabled = True
 
     #显示微信赞赏码
     image = Image.open("wechat-reward-code.jpg")
