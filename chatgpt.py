@@ -33,7 +33,7 @@ def main():
     # 判断用户是否点击了提交按钮
     if submit_button and user_input:
         # 禁用提交按钮，以避免重复提交
-        submit_button = submit_button
+        #submit_button = submit_button
         #submit_button.empty()
         submit_button = st.button("提交中...", key="submit_button", disabled=True)
 
@@ -47,12 +47,11 @@ def main():
         st.write(answer)
 
         # 启用提交按钮，以允许下一次提交
-        submit_button= submit_button
+        #submit_button= submit_button
         submit_button = st.button("提交", key="submit_button")
 
         # 创建保存回答按钮
         save_answer = st.button("保存回答")
-
         # 判断用户是否点击了保存回答按钮
         if save_answer:
             # 弹出对话框，让用户选择保存路径
