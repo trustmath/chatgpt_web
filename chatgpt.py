@@ -31,11 +31,7 @@ def main():
     submit_button = st.button("提交")
 
     # 判断用户是否点击了提交按钮
-    if submit_button and user_input:
-        # 禁用提交按钮，以避免重复提交
-        #submit_button = submit_button
-        #submit_button.empty()
-        #submit_button = st.button("提交中...", key="submit_button", disabled=True)
+    if submit_button or user_input:
 
         # 获取回答
         answer = get_answer(user_input)
@@ -46,22 +42,6 @@ def main():
         st.write("回答：")
         st.write(answer)
 
-        # 启用提交按钮，以允许下一次提交
-        #submit_button= submit_button
-        #submit_button = st.button("提交", key="submit_button")
-
-        # 创建保存回答按钮
-        save_answer = st.button("保存回答")
-
-        # 判断用户是否点击了保存回答按钮
-        if save_answer:
-            # 弹出对话框，让用户选择保存路径
-            save_path = st.text_input("请输入保存路径", "answer.txt")
-
-            # 保存回答到本地文件
-            with open(save_path, "w") as file:
-                file.write(answer)
-            st.write("回答已保存。")
 
     
     #网站介绍
