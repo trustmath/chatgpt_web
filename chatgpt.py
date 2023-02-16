@@ -27,7 +27,7 @@ def main():
     #st.write("请提问:")
 
     # 获取用户输入
-    prompt = st.text_input("请输入问题")
+    prompt = st.text_input("请输入问题：")
     submit_button = st.button("提交")
 
     if submit_button:
